@@ -96,7 +96,11 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.textmeshpro": {
+<<<<<<< Updated upstream
       "version": "3.0.6",
+=======
+      "version": "3.0.8",
+>>>>>>> Stashed changes
       "depth": 0,
       "source": "registry",
       "dependencies": {
