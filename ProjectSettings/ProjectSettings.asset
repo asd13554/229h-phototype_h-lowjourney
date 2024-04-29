@@ -4,11 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-<<<<<<< Updated upstream
-  productGUID: bae9197938a40bd4d8627cc95ac5b25a
-=======
   productGUID: 2dce6af0dd6806b4dbfa6cad6e5f6363
->>>>>>> Stashed changes
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -17,11 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-<<<<<<< Updated upstream
-  productName: Low_Journey
-=======
   productName: Ball_and_Trail
->>>>>>> Stashed changes
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -52,13 +44,8 @@ PlayerSettings:
   m_HolographicTrackingLossScreen: {fileID: 0}
   defaultScreenWidth: 1920
   defaultScreenHeight: 1080
-<<<<<<< Updated upstream
-  defaultScreenWidthWeb: 960
-  defaultScreenHeightWeb: 600
-=======
   defaultScreenWidthWeb: 1920
   defaultScreenHeightWeb: 1080
->>>>>>> Stashed changes
   m_StereoRenderingPath: 0
   m_ActiveColorSpace: 0
   unsupportedMSAAFallback: 0
@@ -366,12 +353,8 @@ PlayerSettings:
   openGLRequireES31: 0
   openGLRequireES31AEP: 0
   openGLRequireES32: 0
-<<<<<<< Updated upstream
-  m_TemplateCustomTags: {}
-=======
   m_TemplateCustomTags:
     PRODUCT_DESCRIPTION: 
->>>>>>> Stashed changes
   mobileMTRendering:
     Android: 1
     iPhone: 1
@@ -647,11 +630,7 @@ PlayerSettings:
   webGLTemplate: APPLICATION:Default
   webGLAnalyzeBuildSize: 0
   webGLUseEmbeddedResources: 0
-<<<<<<< Updated upstream
-  webGLCompressionFormat: 1
-=======
   webGLCompressionFormat: 2
->>>>>>> Stashed changes
   webGLWasmArithmeticExceptions: 0
   webGLLinkerTarget: 1
   webGLThreadsSupport: 0
@@ -695,22 +674,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-<<<<<<< Updated upstream
-  metroPackageName: Low_Journey
-=======
   metroPackageName: Ball_and_Trail
->>>>>>> Stashed changes
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-<<<<<<< Updated upstream
-  metroApplicationDescription: Low_Journey
-=======
   metroApplicationDescription: Ball_and_Trail
->>>>>>> Stashed changes
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -779,17 +750,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-<<<<<<< Updated upstream
-  cloudProjectId: 8cad1227-0bda-49b5-b00f-d963834994e7
-  framebufferDepthMemorylessMode: 0
-  qualitySettingsNames: []
-  projectName: Low_Journey
-=======
   cloudProjectId: 1ad6b5b3-c41b-4dc0-870c-f8a12659365b
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
   projectName: Ball_and_Trail
->>>>>>> Stashed changes
   organizationId: purple-scabs
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
