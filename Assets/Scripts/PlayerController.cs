@@ -92,6 +92,7 @@ public class PlayerController : MonoBehaviour
         }
     }
     
+    /////////////////////////////////////////////////////////
     private void OnTriggerEnter2D(Collider2D Col)
     {
         //Get Goal and move to Credit Scene
@@ -110,9 +111,9 @@ public class PlayerController : MonoBehaviour
         //Player Die
         if (Col.gameObject.tag == "Enemy")
         {
-            Col.gameObject.SetActive(false);
-            ScoreManager.instance.AddPoint();
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         }
+        
     }
-
+    /////////////////////////////////////////////////////////
 }

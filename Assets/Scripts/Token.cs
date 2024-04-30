@@ -20,5 +20,10 @@ public class Token : MonoBehaviour
             sword.gameObject.SetActive(false);
         }
         
+        //Destroy Enemy
+        if (Col.gameObject.tag == "Enemy")
+        {
+            Col.gameObject.SetActive(false);
+        }
     }
 }
