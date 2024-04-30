@@ -40,8 +40,6 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        InputProgress();
-        
         //Player Jump
         if (Input.GetKeyDown(KeyCode.W))
         {
@@ -58,22 +56,27 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        Move();
+        InputProgress();
     } // Fixed Update
     
     public void SetState(UnitState toState)
     {
         state = toState;
-        if (state == UnitState.Idle)
-        {
-            navAgent.isStopped = true;
-            navAgent.ResetPath();
-        }
     }
 
     private void InputProgress()
     {
         xInput = Input.GetAxis("Horizontal");
+        if (Input.GetAxisRaw("Horizontal") == 0)
+        {
+            SetState(UnitState.Idle);
+            return;
+        }
+        SetState(UnitState.Move);
+        Move();
+        
+        if (Input.GetAxisRaw("Horizontal") != 0)
+            transform.right = Input.GetAxisRaw("Horizontal") < 0 ? Vector2.left : Vector2.right;
     }
 
     private void Move()
@@ -99,6 +102,13 @@ public class PlayerController : MonoBehaviour
         
         //Get Score from Token
         if (Col.gameObject.tag == "Token")
+        {
+            Col.gameObject.SetActive(false);
+            ScoreManager.instance.AddPoint();
+        }
+        
+        //Player Die
+        if (Col.gameObject.tag == "Enemy")
         {
             Col.gameObject.SetActive(false);
             ScoreManager.instance.AddPoint();

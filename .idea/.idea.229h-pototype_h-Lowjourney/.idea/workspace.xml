@@ -9,6 +9,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/CameraController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/NewBehaviourScript.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/ScoreManager.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Token.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/UnitAnimation.cs" root0="FORCE_HIGHLIGHTING" />
@@ -80,6 +81,7 @@
       <workItem from="1711192499234" duration="926000" />
       <workItem from="1711195462966" duration="699000" />
       <workItem from="1714371595891" duration="19851000" />
+      <workItem from="1714452980735" duration="3385000" />
     </task>
     <servers />
   </component>
