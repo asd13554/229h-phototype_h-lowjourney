@@ -7,7 +7,7 @@ public class ShootPoint : MonoBehaviour
     public GameObject target;
     public Transform shootPoint;
     public Rigidbody2D bullet;
-    
+
     // Update
     void Update()
     {
@@ -23,17 +23,16 @@ public class ShootPoint : MonoBehaviour
                 target.transform.position = new Vector2(hit.point.x, hit.point.y);
                 Debug.Log(" Hit point : " + hit.point);
 
-                
-                Vector2 projectileV = CulculateProjectile(shootPoint.position, hit.point, 1);
+                Vector2 projectileV = CulculateProjectile(shootPoint.position, hit.point, 0.5f);
                 
                 Rigidbody2D spawnBullet = Instantiate(bullet, shootPoint.position, Quaternion.identity);
                 
                 spawnBullet.velocity = projectileV;
             }
         }
-        
 
     }// Update
+    
     Vector2 CulculateProjectile(Vector2 origin, Vector2 targetPoint, float time)
     {
         Vector2 distance = targetPoint - origin;
@@ -45,4 +44,5 @@ public class ShootPoint : MonoBehaviour
 
         return projecttileVelocity;
     }
+    
 }

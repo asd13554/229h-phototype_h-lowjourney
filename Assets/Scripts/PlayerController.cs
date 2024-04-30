@@ -3,9 +3,26 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.AI;
+
+public enum UnitState
+{
+    Idle,
+    Move,
+    Attack,
+    Jump
+}
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private UnitState state;
+    public UnitState State { get { return state; } set { state = value; } }
+    
+    private NavMeshAgent navAgent;
+    public NavMeshAgent NavAgent { get { return navAgent; } }
+    
+    
+    
     public Rigidbody2D rb2D;
     public float moveSpeed = 10f;
     public float jump = 5;
@@ -28,15 +45,31 @@ public class PlayerController : MonoBehaviour
         //Player Jump
         if (Input.GetKeyDown(KeyCode.W))
         {
+            SetState(UnitState.Jump);
             rb2D.AddForce(new Vector2(0,jump), ForceMode2D.Impulse);
         }
         
+        if (Input.GetMouseButtonDown(0))
+        {
+            SetState(UnitState.Attack);
+        }
+
     } // Update
 
     void FixedUpdate()
     {
         Move();
     } // Fixed Update
+    
+    public void SetState(UnitState toState)
+    {
+        state = toState;
+        if (state == UnitState.Idle)
+        {
+            navAgent.isStopped = true;
+            navAgent.ResetPath();
+        }
+    }
 
     private void InputProgress()
     {
@@ -47,7 +80,8 @@ public class PlayerController : MonoBehaviour
     {
         rb2D.AddForce(new Vector3(xInput,0f,zInput) * moveSpeed * Time.deltaTime);
         rb2D.velocity = new Vector2(xInput * moveSpeed, rb2D.velocity.y);
-
+        SetState(UnitState.Move);
+        
         //Respawn player to Original Position
         if (transform.position.y < Drop)
         {
